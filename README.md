@@ -4,19 +4,18 @@
 ## i3 WM ->
 
 ### Workspaces
-3 x Screens or 4 x Screen (xrandr)
-  WS1 - Browser
-  WS2 - Codium
-  WS3 - Terminal
-  WS4 - File Explorer
-  WS5 - IM
-  WS6 - Mail
-  WS7 - DEV1
-  WS8 - DB 
-  WS9 - REST 
-  WS0 - Vault
-  
-  
+
+    WS1 - Browser (firefox-developer-edition)
+    WS2 - Codium (VS Codium)
+    WS3 - Terminal (mate-terminal)
+    WS4 - File Explorer (ranger/nautilus)
+    WS5 - IM (rocket/teams)
+    WS6 - Mail (Thunderbird)
+    WS7 - DEV1 (JetBrains IDE's)
+    WS8 - DB (Datagrip)
+    WS9 - REST (Insomnia)
+    WS0 - Vault (Bitwarden)
+   
 ## vim.rc
 
 TODO
