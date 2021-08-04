@@ -109,3 +109,8 @@ alias v='sudo vim'
 alias cps='rsync --progress'
 
 alias vm="ssh -p 7822 zakk@compuware.store"
+
+# VIRTUALENV
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+source /usr/bin/virtualenvwrapper.sh
