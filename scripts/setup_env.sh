@@ -7,7 +7,6 @@ IAM=`whoami`
 
 echo "WORKING IN: $DIR"
 echo "PARENT DIR: $PARENT_DIR"
-echo ""
 
 # set theme & enable history & git plugin
 zsh_basics () {
@@ -17,12 +16,12 @@ zsh_basics () {
 # install ohmyzsh on Manjaro or Ubuntu
 install_ohmyzsh () {
     if [ "$DISTRO" == "ManjaroLinux" ]; then
-        echo "Updating Manjaro"
+        echo "Updating Manjaro ->"
         sudo pacman -Syuu
         sudo pacman -S git curl zsh
 
     elif [ "$DISTRO" = "Ubuntu" ]; then
-        echo "Updating Ubuntu"
+        echo "Updating Ubuntu ->"
         sudo apt update && sudo apt upgrade
         sudo apt -y install git zsh curl
     fi
@@ -41,29 +40,39 @@ no_passwd_sudo () {
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 python_virtual_env () {
-echo "# VIRTUALENV" >> $PARENT_DIR/zshrc_config
-echo "export WORKON_HOME=~/.virtualenvs" >> $PARENT_DIR/zshrc_config
-echo "mkdir -p $WORKON_HOME" >> $PARENT_DIR/zshrc_config
-echo "source /usr/bin/virtualenvwrapper.sh" >> $PARENT_DIR/zshrc_config
+    grep -qF "# VIRTUALENV" $PARENT_DIR/zshrc_config || echo -e "\n# VIRTUALENV" | tee -a $PARENT_DIR/zshrc_config
+    grep -qF "export WORKON_HOME=~/.virtualenvs" $PARENT_DIR/zshrc_config || echo -e "export WORKON_HOME=~/.virtualenvs" | tee -a $PARENT_DIR/zshrc_config
+    grep -qF "mkdir -p $WORKON_HOME" $PARENT_DIR/zshrc_config || echo -e "mkdir -p $WORKON_HOME" | tee -a $PARENT_DIR/zshrc_config
+    grep -qF "source /usr/bin/virtualenvwrapper.sh" $PARENT_DIR/zshrc_config || echo -e "source /usr/bin/virtualenvwrapper.sh" | tee -a $PARENT_DIR/zshrc_config
 }
 #echo "alias sai='sudo apt install' \nalias sau='sudo apt update && sudo apt upgrade'\n" >>  ~/.zshrc
 
-echo ""
-echo "install ohmyzsh [update required]?"
-select yn in "Yes" "No"; do
-    case $yn in
-        #Yes ) add_aliases; zsh_basics; break;;
-        Yes ) install_ohmyzsh; break;;
-        No )  break;;
-    esac
-done
+#echo ""
+#echo "install ohmyzsh [update required]?"
+#select yn in "Yes" "No"; do
+#    case $yn in
+#        #Yes ) add_aliases; zsh_basics; break;;
+#        Yes ) install_ohmyzsh; break;;
+#        No )  break;;
+#    esac
+#done
+#
+#echo ""
+#echo "add this user to /etc/sudoers?"
+#select yn in "Yes" "No"; do
+#    case $yn in
+#        #Yes ) add_aliases; zsh_basics; break;;
+#        Yes ) no_passwd_sudo; break;;
+#        No )  break;;
+#    esac
+#done
 
 echo ""
-echo "add this user to /etc/sudoers?"
+echo "python virualnenvwrapper?"
 select yn in "Yes" "No"; do
     case $yn in
         #Yes ) add_aliases; zsh_basics; break;;
-        Yes ) no_passwd_sudo; break;;
+        Yes ) python_virtual_env; break;;
         No )  break;;
     esac
 done
