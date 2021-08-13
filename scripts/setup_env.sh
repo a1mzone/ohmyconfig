@@ -22,16 +22,7 @@ fi
 # TODO - add yum / dnf support
 #sudo yum install zsh git curl
 test () {
-    grep -qxF 'alias src=source ~/.zshrc\' || echo "alias src='source ~/.zshrc'" >> ~/.zshrc
-}
-
-add_aliases () {
-    echo "alias src='source ~/.zshrc'" >> ~/.zshrc 
-    echo "alias esrc='vim ~/.zshrc'" >> ~/.zshrc 
-    echo "alias ns='sudo netstat -tulpn | grep LISTEN'" >> ~/.zshrc 
-    echo "alias pse='sudo ps -ef | grep'" >> ~/.zshrc 
-    echo "alias ss='sudo systemctl'" >> ~/.zshrc 
-    echo "alias v='sudo vim'" >> ~/.zshrc
+    grep -qF "alias src='source ~/.zshrc'" $PARENT_DIR/zshrc_config || echo -e "alias src='source ~/.zshrc'" | tee -a $PARENT_DIR/zshrc_config
 }
 
 no_passwd_sudo () {
@@ -44,10 +35,10 @@ zsh_basics () {
 }
 
 python_virtual_env () {
-echo "# VIRTUALENV" >> ~/.zshrc
-echo "export WORKON_HOME=~/.virtualenvs" >> ~/.zshrc
-echo "mkdir -p $WORKON_HOME" >> ~/.zshrc
-echo "source /usr/bin/virtualenvwrapper.sh" >> ~/.zshrc
+echo "# VIRTUALENV" >> $PARENT_DIR/zshrc_config
+echo "export WORKON_HOME=~/.virtualenvs" >> $PARENT_DIR/zshrc_config
+echo "mkdir -p $WORKON_HOME" >> $PARENT_DIR/zshrc_config
+echo "source /usr/bin/virtualenvwrapper.sh" >> $PARENT_DIR/zshrc_config
 }
 #echo "alias sai='sudo apt install' \nalias sau='sudo apt update && sudo apt upgrade'\n" >>  ~/.zshrc
 
@@ -57,6 +48,16 @@ select yn in "Yes" "No"; do
     case $yn in
         #Yes ) add_aliases; zsh_basics; break;;
         Yes ) no_passwd_sudo; break;;
+        No )  break;;
+    esac
+done
+
+echo ""
+echo "alias test?"
+select yn in "Yes" "No"; do
+    case $yn in
+        #Yes ) add_aliases; zsh_basics; break;;
+        Yes ) test; break;;
         No )  break;;
     esac
 done
