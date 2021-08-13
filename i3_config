@@ -128,7 +128,7 @@ bindsym $mod+l exec --no-startup-id blurlock
 
 # focus_follows_mouse yes
 
-####################
+#################### 
 ### FOCUS, WINDOWS
 ####################
 
@@ -150,8 +150,7 @@ bindsym $mod+Shift+Right move right
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to worksprometheus-2.28.1.linux-amd64/LICENSE
-pace back_and_forth; workspace back_and_forth
+bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+h split h;exec notify-send 'Tile Horizontally'
@@ -217,7 +216,7 @@ set $ws5 5:
 set $ws6 6:
 set $ws7 7:
 set $ws8 8:
-set $ws9 9:
+set $ws9 9:
 set $ws10 10:
 
 # MUSIC -> 
