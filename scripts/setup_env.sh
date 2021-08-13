@@ -35,7 +35,7 @@ add_aliases () {
 }
 
 no_passwd_sudo () {
-    sudo grep -qxF '$IAM  ALL=(ALL) NOPASSWD: ALL' /etc/sudoers || sudo echo "$IAM  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers 
+    sudo grep -qxF "${IAM}  ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo -e "$IAM  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers 
 }
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 zsh_basics () {
@@ -51,7 +51,8 @@ echo "source /usr/bin/virtualenvwrapper.sh" >> ~/.zshrc
 }
 #echo "alias sai='sudo apt install' \nalias sau='sudo apt update && sudo apt upgrade'\n" >>  ~/.zshrc
 
-echo "Common aliases & gnzh & history plugin?"
+echo ""
+echo "add this user in /etc/sudoers?"
 select yn in "Yes" "No"; do
     case $yn in
         #Yes ) add_aliases; zsh_basics; break;;
