@@ -29,6 +29,24 @@ install_ohmyzsh () {
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && zsh_basics
 }
 
+install_snaps () {
+    if [ "$DISTRO" == "ManjaroLinux" ]; then
+        sudo pacman -S snapd
+
+    elif [ "$DISTRO" = "Ubuntu" ]; then
+        echo "Updating Ubuntu ->"
+        sudo apt update && sudo apt upgrade
+        sudo apt -y install snapd
+    fi 
+
+    sudo snap install teams-for-linux 
+    sudo snap install node-red
+    sudo snap install insomnia
+    sudo snap install simplenote
+    sudo snap install bitwarden
+    #sudo snap install slack --classic
+}
+
 # test function
 check_test () {
     grep -qF "alias src='source ~/.zshrc'" $PARENT_DIR/zshrc_config || echo -e "alias src='source ~/.zshrc'" | tee -a $PARENT_DIR/zshrc_config
@@ -47,6 +65,8 @@ python_virtual_env () {
     grep -qF "mkdir -p $WORKON_HOME" $PARENT_DIR/zshrc_config || echo -e "mkdir -p $WORKON_HOME" | tee -a $PARENT_DIR/zshrc_config
     grep -qF "source /usr/bin/virtualenvwrapper.sh" $PARENT_DIR/zshrc_config || echo -e "source /usr/bin/virtualenvwrapper.sh" | tee -a $PARENT_DIR/zshrc_config
 }
+
+
 
 #echo ""
 #echo "install ohmyzsh [update required]?"
