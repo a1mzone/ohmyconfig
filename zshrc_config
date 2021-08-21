@@ -74,6 +74,8 @@ plugins=(history)
 
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR=vim
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -100,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export EDITOR='vim'
+
 alias esrc='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 alias ns='sudo netstat -tulpn | grep LISTEN'
@@ -107,6 +111,9 @@ alias pse='sudo ps -ef | grep'
 alias ss='sudo systemctl'
 alias v='sudo vim'
 alias cps='rsync --progress'
+alias sc='gnome-screenshot -i'
+
+alias sgf='sg_format -F --size=512 -Q -e' 
 
 alias vm="ssh -p 7822 zakk@compuware.store"
 # VIRTUALENV
