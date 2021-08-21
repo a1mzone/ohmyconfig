@@ -113,10 +113,11 @@ alias v='sudo vim'
 alias cps='rsync --progress'
 alias sc='gnome-screenshot -i'
 
-alias sgf='sg_format -F --size=512 -Q -e' 
+alias sgf='sudo sg_format -F --size=512 -Q -e'
+alias sgs='sudo sg_turs -p'   
 
 alias vm="ssh -p 7822 zakk@compuware.store"
 # VIRTUALENV
 export WORKON_HOME=~/.virtualenvs
-mkdir -p 
+mkdir -p ~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
