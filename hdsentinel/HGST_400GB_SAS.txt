@@ -1,0 +1,100 @@
+# 6 x 400B HGST SSD
+# 94% Health, 1 x 93%
+# 840TB average 
+# https://www.disctech.com/HGST-0TS1376-400GB-ISE-Solid-State
+
+HDD Model ID : HGST    HUSMH8040BSS200
+HDD Serial No: 0MWZ23GA
+HDD Revision : A303
+HDD Size     : 381554 MB
+Interface    : SCSI
+Temperature  : 28 °C
+Highest Temp.: 28 °C
+Health       : 94 %
+Performance  : 100 %
+Power on time: 1172 days, 0 hours, 4 minutes (estimated)
+Est. lifetime: 576 days
+Total written: 841.81 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Model ID : HGST    HUSMH8040BSS200
+HDD Serial No: 0MWZ24BA
+HDD Revision : A303
+HDD Size     : 381554 MB
+Interface    : SCSI
+Temperature  : 28 °C
+Highest Temp.: 28 °C
+Health       : 94 %
+Performance  : 100 %
+Power on time: 1172 days, 0 hours, 4 minutes (estimated)
+Est. lifetime: 576 days
+Total written: 829.90 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Model ID : HGST    HUSMH8040BSS200
+HDD Serial No: 0MWZ24DA
+HDD Revision : A303
+HDD Size     : 381554 MB
+Interface    : SCSI
+Temperature  : 27 °C
+Highest Temp.: 27 °C
+Health       : 94 %
+Performance  : 100 %
+Power on time: 1172 days, 0 hours, 5 minutes (estimated)
+Est. lifetime: 576 days
+Total written: 845.04 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Model ID : HGST    HUSMH8040BSS200
+HDD Serial No: 0MWZ1WZA
+HDD Revision : A303
+HDD Size     : 381554 MB
+Interface    : SCSI
+Temperature  : 27 °C
+Highest Temp.: 27 °C
+Health       : 93 %
+Performance  : 100 %
+Power on time: 1172 days, 0 hours, 2 minutes (estimated)
+Est. lifetime: 564 days
+Total written: 839.62 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Model ID : HGST    HUSMH8040BSS200
+HDD Serial No: 0MWZ247A
+HDD Revision : A303
+HDD Size     : 381554 MB
+Interface    : SCSI
+Temperature  : 28 °C
+Highest Temp.: 28 °C
+Health       : 94 %
+Performance  : 100 %
+Power on time: 1172 days, 0 hours, 0 minutes (estimated)
+Est. lifetime: 576 days
+Total written: 837.35 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Model ID : HGST    HUSMH8040BSS200
+HDD Serial No: 0MWZ24WA
+HDD Revision : A303
+HDD Size     : 381554 MB
+Interface    : SCSI
+Temperature  : 27 °C
+Highest Temp.: 27 °C
+Health       : 94 %
+Performance  : 100 %
+Power on time: 1172 days, 0 hours, 7 minutes (estimated)
+Est. lifetime: 576 days
+Total written: 836.15 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.

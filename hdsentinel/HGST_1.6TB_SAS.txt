@@ -1,0 +1,88 @@
+# 5 x 1.6TB HGST SAS 12Gb 2.5" 
+# 99% Health on all 5 disk
+# https://www.disctech.com/HGST-0TS1385-1.6TB-SED-SAS-Solid-State-Drive
+
+HDD Device  9: /dev/sdg
+HDD Model ID : HGST    HUSMR1616ASS200
+HDD Serial No: 09WXV83A
+HDD Revision : A302
+HDD Size     : 1526185 MB
+Interface    : SCSI
+Temperature  : 25 °C
+Highest Temp.: 25 °C
+Health       : 99 %
+Performance  : 100 %
+Power on time: 1139 days, 19 hours, 49 minutes (estimated)
+Est. lifetime: more than 671 days
+Total written: 152.29 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Device 10: /dev/sdh
+HDD Model ID : HGST    HUSMR1616ASS200
+HDD Serial No: 09WXV6AA
+HDD Revision : A302
+HDD Size     : 1526185 MB
+Interface    : SCSI
+Temperature  : 26 °C
+Highest Temp.: 26 °C
+Health       : 99 %
+Performance  : 100 %
+Power on time: 1139 days, 21 hours, 13 minutes (estimated)
+Est. lifetime: more than 671 days
+Total written: 153.14 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Device 11: /dev/sdi
+HDD Model ID : HGST    HUSMR1616ASS200
+HDD Serial No: 09WXKVXA
+HDD Revision : A302
+HDD Size     : 1526185 MB
+Interface    : SCSI
+Temperature  : 25 °C
+Highest Temp.: 25 °C
+Health       : 99 %
+Performance  : 100 %
+Power on time: 1140 days, 7 hours, 18 minutes (estimated)
+Est. lifetime: more than 671 days
+Total written: 150.51 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Device 12: /dev/sdj
+HDD Model ID : HGST    HUSMR1616ASS200
+HDD Serial No: 09WXLJ4A
+HDD Revision : A302
+HDD Size     : 1526185 MB
+Interface    : SCSI
+Temperature  : 25 °C
+Highest Temp.: 25 °C
+Health       : 99 %
+Performance  : 100 %
+Power on time: 1140 days, 9 hours, 23 minutes (estimated)
+Est. lifetime: more than 670 days
+Total written: 152.15 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
+
+HDD Device 13: /dev/sdk
+HDD Model ID : HGST    HUSMR1616ASS200
+HDD Serial No: 09WXUYRA
+HDD Revision : A302
+HDD Size     : 1526185 MB
+Interface    : SCSI
+Temperature  : 25 °C
+Highest Temp.: 25 °C
+Health       : 99 %
+Performance  : 100 %
+Power on time: 1139 days, 20 hours, 0 minutes (estimated)
+Est. lifetime: more than 671 days
+Total written: 152.53 TB
+  The status of the solid state disk is PERFECT. Problematic or weak sectors were not found. 
+  The health is determined by SSD specific S.M.A.R.T. attribute(s):  Percentage used endurance indicator
+    No actions needed.
