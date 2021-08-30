@@ -278,17 +278,17 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 workspace $ws1 output DVI-D-0
 workspace $ws4 output DVI-D-0
 workspace $ws7 output DVI-D-0
-workspace $ws11 output DVI-D-0
 
-workspace $ws2 output DisplayPort-1
-workspace $ws5 output DisplayPort-1
-workspace $ws8 output DisplayPort-1
-workspace $ws12 output DisplayPort-1
 
-workspace $ws3 output HDMI-A-0
-workspace $ws6 output HDMI-A-0
-workspace $ws9 output HDMI-A-0
-workspace $ws13 output HDMI-A-0
+workspace $ws2 output HDMI-A-0
+workspace $ws5 output HDMI-A-0
+workspace $ws8 output HDMI-A-0
+
+
+workspace $ws3 output DisplayPort-1
+workspace $ws6 output DisplayPort-1
+workspace $ws9 output DisplayPort-1
+workspace $ws0 output DisplayPort-1
 
 # ASSIGN WINDOWS
 
@@ -419,8 +419,8 @@ bar {
 	position bottom
 
 # please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-	tray_output DP-1
+	tray_output primary
+#	tray_output DP-1
 
 	bindsym button4 nop
 	bindsym button5 nop
