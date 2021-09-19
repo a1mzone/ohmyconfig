@@ -112,9 +112,12 @@ alias ss='sudo systemctl'
 alias v='sudo vim'
 alias cps='rsync --progress'
 alias sc='gnome-screenshot -i'
+alias cda='cd /btrfs/applications/apache/'
 
 alias sgf='sudo sg_format -F --size=512 -Q -e'
 alias sgs='sudo sg_turs -p'   
+ 
+alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
 
 alias vm="ssh -p 7822 zakk@compuware.store"
 # VIRTUALENV

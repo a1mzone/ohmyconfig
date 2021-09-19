@@ -4,5 +4,5 @@
 # downloads only the audio container
 # ln -s /mnt/c/Users/IZAKCOETZEE/Music ~/music
 
-cd ~/music/NEW/
+cd ~/Music/NEW/
 ~/.local/bin/youtube-dl -f 140 'https://www.youtube.com/watch?v='$1
