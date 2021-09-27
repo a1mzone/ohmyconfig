@@ -54,14 +54,6 @@ ZSH_THEME="gnzh"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -76,51 +68,41 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 
-# User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export EDITOR='vim'
-
-alias esrc='vim ~/.zshrc'
+# general
+alias esrc='codium ~/source/ohmyconfig/zshrc_config'
 alias src='source ~/.zshrc'
+alias v='sudo vim'
 alias ns='sudo netstat -tulpn | grep LISTEN'
 alias pse='sudo ps -ef | grep'
 alias ss='sudo systemctl'
-alias v='sudo vim'
 alias cps='rsync --progress'
-alias sc='gnome-screenshot -i'
-alias cda='cd /btrfs/applications/apache/'
 
+alias sc='gnome-screenshot -i'
+
+# apache 
+alias cda='cd /btrfs/applications/apache/'
+alias zep='/btrfs/applications/apache/zeppelin/zeppelin-0.10.0/bin/zeppelin-daemon.sh'
+
+# disk 
 alias sgf='sudo sg_format -F --size=512 -Q -e'
 alias sgs='sudo sg_turs -p'   
- 
+
+# ubuntu 
+alias sai="sudo apt install"
+alias sau="sudo apt update && sudo apt upgrade"
+
+# youtube
 alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
 
 alias vm="ssh -p 7822 zakk@compuware.store"
+
 # VIRTUALENV
 export WORKON_HOME=~/.virtualenvs
 mkdir -p ~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+source /home/zakk/.local/bin/virtualenvwrapper.sh 
