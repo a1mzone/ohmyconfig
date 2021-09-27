@@ -35,12 +35,17 @@ load {
 }
 
 disk "/btrfs" {
-        # format = " hdd %avail "
+        # format = " hdd %avail"c
         format = " ⛁ %avail "
 }
 disk "/" {
         # format = " hdd %avail "
         format = " ⛁ %avail "
+}
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
 }
 
 ethernet _first_ {

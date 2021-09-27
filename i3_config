@@ -1,7 +1,7 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+# Set mod key Manjaro -> (Mod1=<Alt>, Mod4=<Super>) -> Ubuntu APT Reverse
 set $mod Mod4
 
 #######################
@@ -34,7 +34,8 @@ bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec "dmenu_run -i"
+
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -68,15 +69,12 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id mate-terminal -e 'xrandr --output DisplayPort-1 --auto --primary --output HDMI-A-0 --auto --right-of DVI-D-1 --output DisplayPort-1 --auto --right-of HDMI-A-0'
 exec --no-startup-id nm-applet
 
-#exec --no-startup-id xfce4-power-manager
-
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-
+exec --no-startup-id copyq
+exec --no-startup-id tilda
 exec --no-startup-id blueman-applet
 
 #exec --no-startup-id megasync
-exec --no-startup-id tilda
+
 #exec --no-startup-id conky -c ~/.config/conky/config
 
 # Dekstop Startup
@@ -85,19 +83,19 @@ exec --no-startup-id tilda
 #exec --no-startup-id skypeforlinux
 #exec --no-startup-id remmina
 exec --no-startup-id thunderbird
-exec --no-startup-id code
+exec --no-startup-id codium
 exec --no-startup-id insomnia
-exec --no-startup-id firefox-developer-edition
+exec --no-startup-id firefox-dev
 
 exec --no-startup-id bitwarden
 #exec --no-startup-id datagrip
 
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+
 
 # exec_always --no-startup-id sbxkb
-
+# exec_always --no-startup-id ff-theme-util
+# exec_always --no-startup-id fix_xcursor
 # exec_always --no-startup-id ~/.i3/polybar.sh &
 
 exec --no-startup-id nitrogen --restore; sleep 5e; picom -b
@@ -107,14 +105,14 @@ bindsym $mod+Ctrl+b exec mate-terminal -e 'bmenu'
 
 ### F - KEYS
 # OLD MUSIC PLAYER - moc
-bindsym $mod+F5 exec mate-terminal -e 'firefox-developer-edition'
+bindsym $mod+F5 exec mate-terminal -e 'firefox-dev'
 bindsym $mod+F6 exec mate-terminal -e 'ranger'
 bindsym $mod+F7 exec nautilus
 
 ### SCREENSHOT
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
-#bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym Print exec --no-startup-id gnome-screenshot
+bindsym $mod+Print --release exec --no-startup-id gnome-screenshot -i
+bindsym $mod+Shift+s --release exec --no-startup-id gnome-screenshot -i
 
 ### HELP, KILL, RELEASE
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
@@ -312,7 +310,6 @@ assign [class="Bitwarden"] $ws10
 # Open specific applications in floating mode
 for_window [class="Skype"] border pixel 1
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="fpakman"] floating enable
@@ -321,8 +318,6 @@ for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
@@ -453,60 +448,3 @@ bar {
 #  client.placeholder      #000000 #0c0c0c #ffffff #000000 
 #
 #  client.background       #2B2C2B
-
-#######################################################################################
-### settings for i3-gaps: ###
-#######################################################################################
-
-# Set inner/outer gaps
-gaps inner 14
-gaps outer -2
-
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
-
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
