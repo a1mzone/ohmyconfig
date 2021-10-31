@@ -18,6 +18,7 @@ general {
 order += "cpu_usage"
 order += "disk /"
 order += "disk /btrfs"
+order += "disk /media/DATA"
 # order += "disk /home"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -35,6 +36,10 @@ load {
 }
 
 disk "/btrfs" {
+        # format = " hdd %avail"c
+        format = " ⛁ %avail "
+}
+disk "/media/DATA" {
         # format = " hdd %avail"c
         format = " ⛁ %avail "
 }

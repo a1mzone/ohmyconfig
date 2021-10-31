@@ -76,6 +76,7 @@ export EDITOR=vim
 
 # general
 alias esrc='codium ~/source/ohmyconfig/zshrc_config'
+alias ei3='codium ~/source/ohmyconfig/i3_config'
 alias src='source ~/.zshrc'
 alias v='sudo vim'
 alias ns='sudo netstat -tulpn | grep LISTEN'
@@ -101,6 +102,9 @@ alias sau="sudo apt update && sudo apt upgrade"
 alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
 
 alias vm="ssh -p 7822 zakk@compuware.store"
+
+# Hadoop
+export PDSH_RCMD_TYPE=ssh
 
 # VIRTUALENV
 export WORKON_HOME=~/.virtualenvs

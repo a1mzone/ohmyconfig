@@ -65,30 +65,32 @@ bindsym XF86Launch2 exec "mate-terminal -e 'cmus'"
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# 3 x Mon -> DVI | DP | HDMI
-exec --no-startup-id mate-terminal -e 'xrandr --output DisplayPort-1 --auto --primary --output HDMI-A-0 --auto --right-of DVI-D-1 --output DisplayPort-1 --auto --right-of HDMI-A-0'
+
+exec --no-startup-id ~/.screenlayout/config.sh
 exec --no-startup-id nm-applet
 
 exec --no-startup-id copyq
-exec --no-startup-id tilda
+
 exec --no-startup-id blueman-applet
 
-#exec --no-startup-id megasync
 
 #exec --no-startup-id conky -c ~/.config/conky/config
 
 # Dekstop Startup
 
-#exec --no-startup-id synergy
-#exec --no-startup-id skypeforlinux
 #exec --no-startup-id remmina
+#exec --no-startup-id bitwarden
+#exec --no-startup-id megasync
+#exec --no-startup-id tilda
+
+exec --no-startup-id teams-insiders
+exec --no-startup-id volumeicon
 exec --no-startup-id thunderbird
 exec --no-startup-id codium
 exec --no-startup-id insomnia
 exec --no-startup-id firefox-dev
 
-exec --no-startup-id bitwarden
-#exec --no-startup-id datagrip
+exec --no-startup-id datagrip
 
 exec --no-startup-id xautolock -time 10 -locker blurlock
 
@@ -166,9 +168,6 @@ bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 #bindsym $mod+Shift+s sticky toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -256,6 +255,7 @@ bindsym $mod+Mod2+KP_9 workspace $ws9
 bindsym $mod+Mod2+KP_0 workspace $ws10
 
 # MOVE CONTAINER TO WORKSPACES
+
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -265,36 +265,28 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0
+
+workspace $ws1 output DP-3
+workspace $ws2 output DP-4
+workspace $ws3 output DP-2
+workspace $ws4 output DP-1
+workspace $ws5 output DP-3
+workspace $ws6 output DP-4
+workspace $ws7 output DP-2
+workspace $ws8 output DP-1
+workspace $ws9 output DP-2
+workspace $ws0 output DP-1
 
 
-# ASSIGN WORKSPACE 
-# 3 x Mon -> DVI | DisplayPort | HDMI
-# DVI-D-0
-# DisplayPort-0
-# HDMI-A-0
-
-workspace $ws1 output DVI-D-0
-workspace $ws4 output DVI-D-0
-workspace $ws7 output DVI-D-0
-
-
-workspace $ws2 output HDMI-A-0
-workspace $ws5 output HDMI-A-0
-workspace $ws8 output HDMI-A-0
-
-
-workspace $ws3 output DisplayPort-1
-workspace $ws6 output DisplayPort-1
-workspace $ws9 output DisplayPort-1
-workspace $ws0 output DisplayPort-1
 
 # ASSIGN WINDOWS
 
 assign [class="Firefox Developer Edition"] $ws1
-assign [class="code-oss"] $ws2
+assign [class="VSCodium"] $ws2
 
 assign [class="Nautilus"] $ws4
-assign [class="Skype"] $ws5
+assign [class="Microsoft Teams - Insiders"] $ws5
 assign [class="Thunderbird"] $ws6
 assign [class="jetbrains-pycharm"] $ws7
 assign [class="jetbrains-datagrip"] $ws8
