@@ -87,6 +87,7 @@ alias cps='rsync --progress'
 alias sc='gnome-screenshot -i'
 
 # apache 
+alias had='_ su - hadoop'
 alias cda='cd /btrfs/applications/apache/'
 alias zep='/btrfs/applications/apache/zeppelin/zeppelin-0.10.0/bin/zeppelin-daemon.sh'
 
@@ -105,6 +106,7 @@ alias vm="ssh -p 7822 zakk@compuware.store"
 
 # Hadoop
 export PDSH_RCMD_TYPE=ssh
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 # VIRTUALENV
 export WORKON_HOME=~/.virtualenvs
