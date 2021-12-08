@@ -118,6 +118,7 @@ alias sau="sudo apt update && sudo apt upgrade"
 
 # youtube
 alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
+alias ydlv='~/source/ohmyconfig/scripts/ydl_video.sh'
 
 # VIRTUALENV
 export WORKON_HOME=~/.virtualenvs
