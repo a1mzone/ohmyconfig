@@ -108,7 +108,13 @@ alias vm="ssh -p 7822 zakk@compuware.store"
 export PDSH_RCMD_TYPE=ssh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
+export HADOOP_HOME=/btrfs/geospatial/hadoop/hadoop-3.2.2
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+
+export GEOMESA_SPARK_JARS=/btrfs/geospatial/geomesa/libs
+
 # VIRTUALENV
+export PATH=$HOME/.local/bin:$PATH
 export WORKON_HOME=~/.virtualenvs
 mkdir -p ~/.virtualenvs
 source /home/zakk/.local/bin/virtualenvwrapper.sh 

@@ -63,7 +63,9 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Autostart applications
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Ubuntu Server mate-polkit
+exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
 
 exec --no-startup-id ~/.screenlayout/config.sh
 exec --no-startup-id nm-applet
@@ -78,7 +80,7 @@ exec --no-startup-id blueman-applet
 
 #exec --no-startup-id remmina
 #exec --no-startup-id bitwarden
-#exec --no-startup-id megasync
+exec --no-startup-id megasync
 #exec --no-startup-id tilda
 
 exec --no-startup-id teams-insiders
@@ -266,6 +268,20 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
 
+
+#workspace $ws1 output DP-4-8
+#workspace $ws2 output DP-3
+#workspace $ws3 output DP-4-8
+#workspace $ws4 output DP-3
+#workspace $ws5 output DP-4-8e
+#workspace $ws6 output DP-3
+#workspace $ws7 output DP-4-8
+#workspace $ws8 output DP-3
+#workspace $ws9 output DP-4-8
+#workspace $ws0 output DP-3
+
+
+# 4 screen setup at home
 workspace $ws1 output DP-3
 workspace $ws2 output DP-4
 workspace $ws3 output DP-2
@@ -276,7 +292,6 @@ workspace $ws7 output DP-2
 workspace $ws8 output DP-1
 workspace $ws9 output DP-2
 workspace $ws0 output DP-1
-
 
 
 # ASSIGN WINDOWS
@@ -410,7 +425,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-        font xft:URWGothic-Book 11
+        font xft:URWothic-Book 11
 
 	strip_workspace_numbers yes
 
