@@ -266,14 +266,14 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws0
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 
 #workspace $ws1 output DP-4-8
 #workspace $ws2 output DP-3
 #workspace $ws3 output DP-4-8
 #workspace $ws4 output DP-3
-#workspace $ws5 output DP-4-8e
+#workspace $ws5 output DP-4-8
 #workspace $ws6 output DP-3
 #workspace $ws7 output DP-4-8
 #workspace $ws8 output DP-3
@@ -282,16 +282,16 @@ bindsym $mod+Shift+0 move container to workspace $ws0
 
 
 # 4 screen setup at home
-workspace $ws1 output DP-3
+workspace $ws1 output DP-6
 workspace $ws2 output DP-4
 workspace $ws3 output DP-2
-workspace $ws4 output DP-1
-workspace $ws5 output DP-3
+workspace $ws4 output DP-0
+workspace $ws5 output DP-6
 workspace $ws6 output DP-4
 workspace $ws7 output DP-2
-workspace $ws8 output DP-1
+workspace $ws8 output DP-0
 workspace $ws9 output DP-2
-workspace $ws0 output DP-1
+workspace $ws0 output DP-0
 
 
 # ASSIGN WINDOWS
