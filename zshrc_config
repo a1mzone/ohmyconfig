@@ -74,6 +74,13 @@ export EDITOR=vim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# OmniSci
+export OMNISCI_USER=omnisci
+export OMNISCI_GROUP=omnisci
+export OMNISCI_STORAGE=/data/datastore/applications/omnisci_storage
+export OMNISCI_PATH=/data/datastore/applications/omnisci-ee-5.10.2
+export OMNISCI_LOG=/data/datastore/applications/omnisci_storage/data/mapd_log
+
 # general
 alias esrc='codium ~/source/ohmyconfig/zshrc_config'
 alias ei3='codium ~/source/ohmyconfig/i3_config'
@@ -108,10 +115,10 @@ alias vm="ssh -p 7822 zakk@compuware.store"
 export PDSH_RCMD_TYPE=ssh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-export HADOOP_HOME=/btrfs/geospatial/hadoop/hadoop-3.2.2
+export HADOOP_HOME=/data/datastore/geospatial/hadoop/hadoop-3.2.2
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 
-export GEOMESA_SPARK_JARS=/btrfs/geospatial/geomesa/libs
+export GEOMESA_SPARK_JARS=/data/datastore/geospatial/geomesa/libs
 
 # VIRTUALENV
 export PATH=$HOME/.local/bin:$PATH
