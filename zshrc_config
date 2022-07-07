@@ -82,11 +82,13 @@ export OMNISCI_PATH=/data/datastore/applications/omnisci-ee-5.10.2
 export OMNISCI_LOG=/data/datastore/applications/omnisci_storage/data/mapd_log
 
 # general
-alias esrc='codium ~/source/ohmyconfig/zshrc_config'
-alias ei3='codium ~/source/ohmyconfig/i3_config'
+alias esrc='code ~/source/ohmyconfig/zshrc_config'
+alias ei3='code ~/source/ohmyconfig/i3_config'
 alias src='source ~/.zshrc'
 alias v='sudo vim'
+alias gc='git clone'
 alias ns='sudo netstat -tulpn | grep LISTEN'
+alias chmtm='sudo chown -R $USER:$USER .'
 alias pse='sudo ps -ef | grep'
 alias ss='sudo systemctl'
 alias cps='rsync --progress'
@@ -95,8 +97,6 @@ alias sc='gnome-screenshot -i'
 
 # apache 
 alias had='_ su - hadoop'
-alias cda='cd /btrfs/applications/apache/'
-alias zep='/btrfs/applications/apache/zeppelin/zeppelin-0.10.0/bin/zeppelin-daemon.sh'
 
 # disk 
 alias sgf='sudo sg_format -F --size=512 -Q -e'
