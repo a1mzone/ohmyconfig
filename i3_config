@@ -40,14 +40,10 @@ bindsym $mod+d exec "dmenu_run -i"
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
 #exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec mate-terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pa-applet
+#exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
@@ -282,16 +278,16 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 
 # 4 screen setup at home
-workspace $ws1 output DP-6
+workspace $ws1 output DP-1
 workspace $ws2 output DP-4
 workspace $ws3 output DP-2
-workspace $ws4 output DP-0
-workspace $ws5 output DP-6
+workspace $ws4 output DP-3
+workspace $ws5 output DP-1
 workspace $ws6 output DP-4
 workspace $ws7 output DP-2
-workspace $ws8 output DP-0
+workspace $ws8 output DP-3
 workspace $ws9 output DP-2
-workspace $ws0 output DP-0
+workspace $ws0 output DP-3
 
 
 # ASSIGN WINDOWS
