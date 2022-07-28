@@ -110,6 +110,8 @@ alias sau="sudo apt update && sudo apt upgrade"
 alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
 
 alias vm="ssh -p 7822 zakk@compuware.store"
+alias byf="ssh zakk@102.133.138.3"
+alias betl="ssh zakk@102.133.138.158"
 
 # Hadoop
 export PDSH_RCMD_TYPE=ssh
