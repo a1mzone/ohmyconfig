@@ -55,7 +55,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 ####################################################
 ### STARTUP
-####################################################
+#################################################### 
 
 # Autostart applications
 
@@ -63,40 +63,33 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Ubuntu Server mate-polkit
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
 
-exec --no-startup-id ~/.screenlayout/config.sh
+exec --no-startup-id ~/.screenlayout/quad_display.sh
 exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
 
 exec --no-startup-id copyq
-
 exec --no-startup-id blueman-applet
+exec --no-startup-id tilda
 
 #exec --no-startup-id conky -c ~/.config/conky/config
 
 # Dekstop Startup
-
-#exec --no-startup-id remmina
-#exec --no-startup-id bitwarden
-exec --no-startup-id megasync
-#exec --no-startup-id tilda
-
-exec --no-startup-id teams-insiders
-exec --no-startup-id volumeicon
-exec --no-startup-id thunderbird
-exec --no-startup-id codium
-exec --no-startup-id insomnia
 exec --no-startup-id firefox-dev
+exec --no-startup-id code
+
+exec --no-startup-id teams
+exec --no-startup-id thunderbird
+
 
 exec --no-startup-id datagrip
+exec --no-startup-id insomnia
+exec --no-startup-id bitwarden
 
-exec --no-startup-id xmodmap .Xmodmap
+
+
+# exec --no-startup-id xmodmap .Xmodmap
 
 exec --no-startup-id xautolock -time 10 -locker blurlock
-
-# exec_always --no-startup-id sbxkb
-# exec_always --no-startup-id ff-theme-util
-# exec_always --no-startup-id fix_xcursor
-# exec_always --no-startup-id ~/.i3/polybar.sh &
-
 exec --no-startup-id nitrogen --restore; sleep 5e; picom -b
 
 # Start Applications
@@ -191,15 +184,16 @@ bindsym $mod+Ctrl+Left workspace prev
 ###########################
 
 # WS1 - Browser
-# WS2 - Codium
+# WS2 - Code
 # WS3 - Terminal
 # WS4 - File Explorer
-# WS5 - IM
 # WS6 - Mail
 # WS7 - DEV1
 # WS8 - DB 
 # WS9 - REST 
-# WS0 - Vault
+# WS10 - Vault
+# WS11 - Local Terminal Processes
+# WS12 - VM
 
 # DEFINE WORKSPACES
 set $ws1 1:
@@ -212,9 +206,10 @@ set $ws7 7:
 set $ws8 8:
 set $ws9 9:
 set $ws10 10:
+set $ws11 11:
+set $ws12 12:
 
 # MUSIC -> 
-
 
 #set $ws1 1
 #set $ws2 2
@@ -238,6 +233,8 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+F1 workspace $ws11
+bindsym $mod+F2 workspace $ws12
 
 # SWITCH WITH NUMPAD
 bindsym $mod+Mod2+KP_1 workspace $ws1
@@ -263,7 +260,8 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-
+bindsym $mod+Shift+F1 move container to workspace $ws11
+bindsym $mod+Shift+F2 move container to workspace $ws12
 
 #workspace $ws1 output DP-4-8
 #workspace $ws2 output DP-3
@@ -293,10 +291,10 @@ workspace $ws0 output DP-3
 # ASSIGN WINDOWS
 
 assign [class="Firefox Developer Edition"] $ws1
-assign [class="VSCodium"] $ws2
+assign [class="Code"] $ws2
 
 assign [class="Nautilus"] $ws4
-assign [class="Microsoft Teams - Insiders"] $ws5
+assign [class="Microsoft Teams - Preview"] $ws5
 assign [class="Thunderbird"] $ws6
 assign [class="jetbrains-pycharm"] $ws7
 assign [class="jetbrains-datagrip"] $ws8
