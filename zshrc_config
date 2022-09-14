@@ -17,7 +17,7 @@ ZSH_THEME="gnzh"
 # ZSH_THEME_RANDOM_CANDIDATES=( "gnzh" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"t
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -81,6 +81,9 @@ export OMNISCI_STORAGE=/data/datastore/applications/omnisci_storage
 export OMNISCI_PATH=/data/datastore/applications/omnisci-ee-5.10.2
 export OMNISCI_LOG=/data/datastore/applications/omnisci_storage/data/mapd_log
 
+# start packages
+alias base='sudo apt -y install zsh git curl wget virtualenv virtualenvwrapper iotop iostat gparted chromium-browser thunderbird libreoffice arandr copyq mate-terminal fonts-font-awesome nautilus nautilus-share cmus pulseaudio lm-sensors python3-pip nitrogen viewnior ffmpeg kid3 tilda unzip nmap vlc'
+
 # general
 alias esrc='code ~/source/ohmyconfig/zshrc_config'
 alias ei3='code ~/source/ohmyconfig/i3_config'
@@ -89,6 +92,7 @@ alias v='sudo vim'
 alias gc='git clone'
 alias ns='sudo netstat -tulpn | grep LISTEN'
 alias chotm='sudo chown -R $USER:$USER .'
+alias mkx='sudo chmod +x'
 alias pse='sudo ps -ef | grep'
 alias ss='sudo systemctl'
 alias cps='rsync --progress'
