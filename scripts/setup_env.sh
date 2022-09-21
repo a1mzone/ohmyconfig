@@ -42,7 +42,7 @@ install_basic_packages () {
 
     elif [ "$DISTRO" = "Ubuntu" ]; then
         echo "Installing Basic Packages ->"
-        sudo apt -y install python3-pip virtualenv virtualenvwrapper iotop iostat fonts-font-awesome ranger lm-sensors unzip nmap openjdk-8-jdk net-tools acl bmon
+        sudo apt -y install python3-pip virtualenv virtualenvwrapper iotop fonts-font-awesome ranger lm-sensors unzip nmap openjdk-8-jdk net-tools acl bmon
     fi
     
 }
