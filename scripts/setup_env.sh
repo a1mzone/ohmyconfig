@@ -20,14 +20,16 @@ install_ohmyzsh () {
         sudo apt update && sudo apt upgrade
         sudo apt -y install git zsh curl
     fi
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && zsh_basics
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
-# set theme & enable history & git plugin
-zsh_basics () {
-    sed -i 's/robbyrussell/gnzh/g' ~/.zshrc
-    sed -i 's/(git)/(git history)/g' ~/.zshrc
+get_ohmyconfig () {
+    mkdir -pv ~/source && cd ~/source 
+    git clone https://github.com/a1mzone/ohmyconfig
 }
+
+install_ohmyzsh
+get_ohmyconfig
 
 install_snaps () {
     if [ "$DISTRO" == "ManjaroLinux" ]; then
@@ -66,15 +68,17 @@ python_virtual_env () {
     grep -qF "source /usr/bin/virtualenvwrapper.sh" $PARENT_DIR/zshrc_config || echo -e "source /usr/bin/virtualenvwrapper.sh" | tee -a $PARENT_DIR/zshrc_config
 }
 
-echo ""
-echo "install ohmyzsh [update required]?"
-select yn in "Yes" "No"; do
-   case $yn in
-       #Yes ) add_aliases; zsh_basics; break;;
-       Yes ) install_ohmyzsh; break;;
-       No )  break;;
-   esac
-done
+
+
+# echo ""
+# echo "install ohmyzsh [update required]?"
+# select yn in "Yes" "No"; do
+#    case $yn in
+#        #Yes ) add_aliases; zsh_basics; break;;
+#        Yes ) install_ohmyzsh; break;;
+#        No )  break;;
+#    esac
+# done
 
 #echo ""
 #echo "add this user to /etc/sudoers?"
