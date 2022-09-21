@@ -1,5 +1,5 @@
 #!/bin/bash
-#GETINFO
+
 DISTRO=`lsb_release -i | cut -f 2-`
 DIR=`pwd`
 PARENT_DIR=`dirname $DIR`
@@ -7,12 +7,6 @@ IAM=`whoami`
 
 echo "WORKING IN: $DIR"
 echo "PARENT DIR: $PARENT_DIR"
-
-# set theme & enable history & git plugin
-zsh_basics () {
-    sed -i 's/robbyrussell/gnzh/g' ~/.zshrc
-    sed -i 's/(git)/(git history)/g' ~/.zshrc
-}
 
 # install ohmyzsh on Manjaro or Ubuntu
 install_ohmyzsh () {
@@ -29,6 +23,12 @@ install_ohmyzsh () {
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && zsh_basics
 }
 
+# set theme & enable history & git plugin
+zsh_basics () {
+    sed -i 's/robbyrussell/gnzh/g' ~/.zshrc
+    sed -i 's/(git)/(git history)/g' ~/.zshrc
+}
+
 install_snaps () {
     if [ "$DISTRO" == "ManjaroLinux" ]; then
         sudo pacman -S snapd
@@ -39,8 +39,8 @@ install_snaps () {
         sudo apt -y install snapd
     fi 
 
-    sudo snap install teams-for-linux 
-    sudo snap install node-red
+    sudo snap install teams-insiders 
+    # sudo snap install node-red
     sudo snap install insomnia
     sudo snap install simplenote
     sudo snap install bitwarden
@@ -66,17 +66,15 @@ python_virtual_env () {
     grep -qF "source /usr/bin/virtualenvwrapper.sh" $PARENT_DIR/zshrc_config || echo -e "source /usr/bin/virtualenvwrapper.sh" | tee -a $PARENT_DIR/zshrc_config
 }
 
-
-
-#echo ""
-#echo "install ohmyzsh [update required]?"
-#select yn in "Yes" "No"; do
-#    case $yn in
-#        #Yes ) add_aliases; zsh_basics; break;;
-#        Yes ) install_ohmyzsh; break;;
-#        No )  break;;
-#    esac
-#done
+echo ""
+echo "install ohmyzsh [update required]?"
+select yn in "Yes" "No"; do
+   case $yn in
+       #Yes ) add_aliases; zsh_basics; break;;
+       Yes ) install_ohmyzsh; break;;
+       No )  break;;
+   esac
+done
 
 #echo ""
 #echo "add this user to /etc/sudoers?"
