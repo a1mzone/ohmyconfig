@@ -36,6 +36,7 @@ set_ohmyconfig () {
     source ~/.zshrc
 }
 
+# install basic packages
 install_basic_packages () {
     if [ "$DISTRO" == "ManjaroLinux" ]; then
         echo "DO NOTHING... FIX IF YOU WANNA USE"
@@ -44,7 +45,11 @@ install_basic_packages () {
         echo "Installing Basic Packages ->"
         sudo apt -y install python3-pip virtualenv virtualenvwrapper iotop fonts-font-awesome ranger lm-sensors unzip nmap openjdk-8-jdk net-tools acl bmon
     fi
-    
+}
+
+# create virtualenvwrapper home location
+fix_virtualenvwrapper () {
+    mkdir -pv ~/.local/bin && sudo find / -type f -name 'virtualenvwrapper.sh' -exec cp {} ~/.local/bin/ \;
 }
 
 install_ohmyzsh
