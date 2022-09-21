@@ -23,51 +23,54 @@ install_ohmyzsh () {
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
+# get ohmyconfig
 get_ohmyconfig () {
     mkdir -pv ~/source && cd ~/source 
     git clone https://github.com/a1mzone/ohmyconfig
 }
 
-install_ohmyzsh
-get_ohmyconfig
+# set .zshrc to ohmyconfig
+set_ohmyconfig () {
+    rm ~/.zshrc
+    ln -s ~/source/ohmyconfig/zshrc_config ~/.zshrc
+    source ~/.zshrc
+}
 
-install_snaps () {
+install_basic_packages () {
     if [ "$DISTRO" == "ManjaroLinux" ]; then
-        sudo pacman -S snapd
+        echo "DO NOTHING... FIX IF YOU WANNA USE"
 
     elif [ "$DISTRO" = "Ubuntu" ]; then
-        echo "Updating Ubuntu ->"
-        sudo apt update && sudo apt upgrade
-        sudo apt -y install snapd
-    fi 
-
-    sudo snap install teams-insiders 
-    # sudo snap install node-red
-    sudo snap install insomnia
-    sudo snap install simplenote
-    sudo snap install bitwarden
-    #sudo snap install slack --classic
+        echo "Installing Basic Packages ->"
+        sudo apt -y install python3-pip virtualenv virtualenvwrapper iotop iostat fonts-font-awesome ranger lm-sensors unzip nmap openjdk-8-jdk net-tools acl bmon
+    fi
+    
 }
 
-# test function
-check_test () {
-    grep -qF "alias src='source ~/.zshrc'" $PARENT_DIR/zshrc_config || echo -e "alias src='source ~/.zshrc'" | tee -a $PARENT_DIR/zshrc_config
-}
+install_ohmyzsh
+get_ohmyconfig
+set_ohmyconfig
+install_basic_packages
 
-# add the current user to /etc/sudoers
-no_passwd_sudo () {
-    sudo grep -qxF "${IAM}  ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo -e "$IAM  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers 
-}
 
-# setup python venvs
-python_virtual_env () {
-    grep -qF "# VIRTUALENV" $PARENT_DIR/zshrc_config || echo -e "\n# VIRTUALENV" | tee -a $PARENT_DIR/zshrc_config
-    grep -qF "#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" $PARENT_DIR/zshrc_config || echo -e "#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" | tee -a $PARENT_DIR/zshrc_config 
-    grep -qF "export WORKON_HOME=~/.virtualenvs" $PARENT_DIR/zshrc_config || echo -e "export WORKON_HOME=~/.virtualenvs" | tee -a $PARENT_DIR/zshrc_config
-    grep -qF "mkdir -p $WORKON_HOME" $PARENT_DIR/zshrc_config || echo -e "mkdir -p $WORKON_HOME" | tee -a $PARENT_DIR/zshrc_config
-    grep -qF "source /usr/bin/virtualenvwrapper.sh" $PARENT_DIR/zshrc_config || echo -e "source /usr/bin/virtualenvwrapper.sh" | tee -a $PARENT_DIR/zshrc_config
-}
+# # test function
+# check_test () {
+#     grep -qF "alias src='source ~/.zshrc'" $PARENT_DIR/zshrc_config || echo -e "alias src='source ~/.zshrc'" | tee -a $PARENT_DIR/zshrc_config
+# }
 
+# # add the current user to /etc/sudoers
+# no_passwd_sudo () {
+#     sudo grep -qxF "${IAM}  ALL=(ALL) NOPASSWD: ALL" /etc/sudoers || echo -e "$IAM  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers 
+# }
+
+# # setup python venvs
+# python_virtual_env () {
+#     grep -qF "# VIRTUALENV" $PARENT_DIR/zshrc_config || echo -e "\n# VIRTUALENV" | tee -a $PARENT_DIR/zshrc_config
+#     grep -qF "#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" $PARENT_DIR/zshrc_config || echo -e "#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" | tee -a $PARENT_DIR/zshrc_config 
+#     grep -qF "export WORKON_HOME=~/.virtualenvs" $PARENT_DIR/zshrc_config || echo -e "export WORKON_HOME=~/.virtualenvs" | tee -a $PARENT_DIR/zshrc_config
+#     grep -qF "mkdir -p $WORKON_HOME" $PARENT_DIR/zshrc_config || echo -e "mkdir -p $WORKON_HOME" | tee -a $PARENT_DIR/zshrc_config
+#     grep -qF "source /usr/bin/virtualenvwrapper.sh" $PARENT_DIR/zshrc_config || echo -e "source /usr/bin/virtualenvwrapper.sh" | tee -a $PARENT_DIR/zshrc_config
+# }
 
 
 # echo ""
