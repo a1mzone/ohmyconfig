@@ -56,6 +56,7 @@ install_ohmyzsh
 get_ohmyconfig
 set_ohmyconfig
 install_basic_packages
+fix_virtualenvwrapper
 
 
 # # test function
