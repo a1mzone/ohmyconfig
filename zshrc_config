@@ -90,6 +90,10 @@ alias pse='sudo ps -ef | grep'
 alias ss='sudo systemctl'
 alias cps='rsync --progress'
 
+#hadoop
+alias cda='cd ~/accumulo/accumulo-2.0.1/bin'
+alias cdh'cd ~/hadoop/hadoop-3.2.2'
+
 # disk 
 alias sgf='sudo sg_format -F --size=512 -Q -e'
 alias sgs='sudo sg_turs -p'   
