@@ -102,14 +102,44 @@ alias sgs='sudo sg_turs -p'
 alias sai="sudo apt install"
 alias sau="sudo apt update && sudo apt upgrade"
 
-# Hadoop
+# HADOOP
 export PDSH_RCMD_TYPE=ssh
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-
 export HADOOP_HOME=/data/datastore/geospatial/hadoop/hadoop-3.2.2
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_YARN_HOME=$HADOOP_HOME
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export YARN_HOME=$HADOOP_HOME
+export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native
 
+# ACCUMULO
+export ACCUMULO_HOME=/data/datastore/geospatial/accumulo/accumulo-2.0.1
+
+# PATH w/ HDFS and GEOMESA ACCUMULO
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin:$ACCUMULO_HOME/bin:/data/datastore/geospatial/geomesa/geomesa-accumulo_2.12-3.3.0/bin
+
+# ZOOKEEPER
+export ZOOKEEPER_HOME=/data/datastore/geospatial/zookeeper/zookeeper-3.4.14
+
+# GEOSERVER
+export GEOSERVER_HOME=/data/datastore/geospatial/geoserver/geoserver-2.17.3
+
+# GEOMESA
 export GEOMESA_SPARK_JARS=/data/datastore/geospatial/geomesa/libs
+#export GEOMESA_EXTRA_CLASSPATHS=/data/datastore/geospatial/geomesa/libs/ivx-data-format.jar
+
+# SPARK
+export SPARK_HOME=/data/datastore/geospatial/spark/spark-3.1.2
+
+# AIRFLOW
+export AIRFLOW_HOME=~/airflow
+
+# JAVA
+export ES_JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
 # VIRTUALENV
 export PATH=$HOME/.local/bin:$PATH
