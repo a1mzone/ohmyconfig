@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/zakk/.oh-my-zsh"
+export ZSH="/data/datastore/geospatial/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -74,13 +74,6 @@ export EDITOR=vim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# OmniSci
-export OMNISCI_USER=omnisci
-export OMNISCI_GROUP=omnisci
-export OMNISCI_STORAGE=/data/datastore/applications/omnisci_storage
-export OMNISCI_PATH=/data/datastore/applications/omnisci-ee-5.10.2
-export OMNISCI_LOG=/data/datastore/applications/omnisci_storage/data/mapd_log
-
 # start packages
 alias base='sudo apt -y install zsh git curl wget virtualenv virtualenvwrapper iotop iostat gparted chromium-browser thunderbird libreoffice arandr copyq mate-terminal fonts-font-awesome nautilus nautilus-share cmus pulseaudio lm-sensors python3-pip nitrogen viewnior ffmpeg kid3 tilda unzip nmap vlc'
 
@@ -97,11 +90,6 @@ alias pse='sudo ps -ef | grep'
 alias ss='sudo systemctl'
 alias cps='rsync --progress'
 
-alias sc='gnome-screenshot -i'
-
-# apache 
-alias had='_ su - hadoop'
-
 # disk 
 alias sgf='sudo sg_format -F --size=512 -Q -e'
 alias sgs='sudo sg_turs -p'   
@@ -109,13 +97,6 @@ alias sgs='sudo sg_turs -p'
 # ubuntu 
 alias sai="sudo apt install"
 alias sau="sudo apt update && sudo apt upgrade"
-
-# youtube
-alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
-
-alias vm="ssh -p 7822 zakk@compuware.store"
-alias byf="ssh zakk@102.133.138.3"
-alias betl="ssh zakk@102.133.138.158"
 
 # Hadoop
 export PDSH_RCMD_TYPE=ssh
@@ -130,19 +111,5 @@ export GEOMESA_SPARK_JARS=/data/datastore/geospatial/geomesa/libs
 export PATH=$HOME/.local/bin:$PATH
 export WORKON_HOME=~/.virtualenvs
 mkdir -p ~/.virtualenvs
-source /home/zakk/.local/bin/virtualenvwrapper.sh 
+source ~/.local/bin/virtualenvwrapper.sh 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/zakk/mlworkbench/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/zakk/mlworkbench/etc/profile.d/conda.sh" ]; then
-#         . "/home/zakk/mlworkbench/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/zakk/mlworkbench/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
