@@ -268,30 +268,30 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
-#workspace $ws1 output DP-4-8
+#workspace $ws1 output DP-6-8
 #workspace $ws2 output DP-3
-#workspace $ws3 output DP-4-8
+#workspace $ws3 output DP-6-8
 #workspace $ws4 output DP-3
-#workspace $ws5 output DP-4-8
+#workspace $ws5 output DP-6-8
 #workspace $ws6 output DP-3
-#workspace $ws7 output DP-4-8
+#workspace $ws7 output DP-6-8
 #workspace $ws8 output DP-3
-#workspace $ws9 output DP-4-8
+#workspace $ws9 output DP-6-8
 #workspace $ws0 output DP-3
 
 
 # 4 screen setup at home
-workspace $ws1 output DP-1
-workspace $ws2 output DP-4
-workspace $ws3 output DP-2
-workspace $ws4 output DP-3
-workspace $ws5 output DP-1
-workspace $ws6 output DP-4
-workspace $ws7 output DP-2
-workspace $ws8 output DP-3
-workspace $ws9 output DP-2
-workspace $ws10 output DP-3
-workspace $ws11 output DP-1
+workspace $ws1 output DP-4
+workspace $ws2 output DP-6
+workspace $ws3 output DP-5
+workspace $ws4 output DP-7
+workspace $ws5 output DP-4
+workspace $ws6 output DP-6
+workspace $ws7 output DP-5
+workspace $ws8 output DP-7
+workspace $ws9 output DP-4
+workspace $ws10 output DP-6
+workspace $ws11 output DP-7
 workspace $ws12 output DP-4
 
 
@@ -423,7 +423,7 @@ bar {
 
 # please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-#	tray_output DP-1
+#	tray_output DP-4
 
 	bindsym button4 nop
 	bindsym button5 nop
