@@ -103,7 +103,7 @@ alias sau="sudo apt update && sudo apt upgrade"
 # vm 
 alias vm="ssh -p 7822 zakk@compuware.store"
 alias byf="ssh zakk@102.133.138.3"
-alyas betl="ssh zakk@102.133.138.158"
+alias betl="ssh zakk@102.133.138.158"
 
 # youtube
 alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
