@@ -74,9 +74,6 @@ export EDITOR=vim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# start packages
-alias base='sudo apt -y install zsh git curl wget virtualenv virtualenvwrapper iotop iostat gparted chromium-browser thunderbird libreoffice arandr copyq mate-terminal fonts-font-awesome nautilus nautilus-share cmus pulseaudio lm-sensors python3-pip nitrogen viewnior ffmpeg kid3 tilda unzip nmap vlc'
-
 # general
 alias esrc='code ~/source/ohmyconfig/zshrc_config'
 alias ei3='code ~/source/ohmyconfig/i3_config'
@@ -139,6 +136,7 @@ export SPARK_HOME=/data/datastore/geospatial/spark/spark-3.1.2
 export AIRFLOW_HOME=~/airflow
 
 # JAVA
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 export ES_JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
 # VIRTUALENV
