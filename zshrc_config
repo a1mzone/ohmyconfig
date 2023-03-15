@@ -122,4 +122,3 @@ export PATH=$HOME/.local/bin:$PATH
 export WORKON_HOME=~/.virtualenvs
 mkdir -p ~/.virtualenvs
 source ~/.local/bin/virtualenvwrapper.sh 
-
