@@ -110,7 +110,9 @@ alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
 
 # Hadoop
 export PDSH_RCMD_TYPE=ssh
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 
 export HADOOP_HOME=/data/datastore/geospatial/hadoop/hadoop-3.2.2
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
