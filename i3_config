@@ -54,8 +54,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym XF86Launch2 exec "mate-terminal -e 'cmus'"
 
 # VOLUME KEY BIND - daskeyboard :D
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.usb-M-Audio_M-Track_2X2-00.analog-stereo +10%; notify-send 'vol +10'"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.usb-M-Audio_M-Track_2X2-00.analog-stereo -10%; notify-send 'vol +10'"
+#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.usb-M-Audio_M-Track_2X2-00.analog-stereo +10%; notify-send 'vol +10'"
+#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.usb-M-Audio_M-Track_2X2-00.analog-stereo -10%; notify-send 'vol +10'"
 
 
 ####################################################
@@ -281,17 +281,17 @@ bindsym $mod+Shift+F2 move container to workspace $ws12
 
 
 # 4 screen setup at home
-workspace $ws1 output DP-4
-workspace $ws2 output DP-6
-workspace $ws3 output DP-5
-workspace $ws4 output DP-7
-workspace $ws5 output DP-4
-workspace $ws6 output DP-6
-workspace $ws7 output DP-5
-workspace $ws8 output DP-7
-workspace $ws9 output DP-4
-workspace $ws10 output DP-6
-workspace $ws11 output DP-7
+workspace $ws1 output DP-3
+workspace $ws2 output DP-4
+workspace $ws3 output DP-1
+workspace $ws4 output DP-2
+workspace $ws5 output DP-3
+workspace $ws6 output DP-4
+workspace $ws7 output DP-1
+workspace $ws8 output DP-2
+workspace $ws9 output DP-3
+workspace $ws10 output DP-4
+workspace $ws11 output DP-3
 workspace $ws12 output DP-4
 
 
@@ -422,7 +422,7 @@ bar {
 
 # please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
-	tray_output DP-7
+	tray_output DP-1
 
 	bindsym button4 nop
 	bindsym button5 nop
