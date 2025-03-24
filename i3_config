@@ -2,7 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key Manjaro -> (Mod1=<Alt>, Mod4=<Super>) -> Ubuntu APT Reverse
-set $mod Mod4
+set $mod Mod1
 
 #######################
 ### BORDERS
@@ -34,7 +34,7 @@ bindsym $mod+Return exec mate-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec "dmenu_run -i"
+bindsym $mod+d exec "rofi -show run"
 
 
 # launch categorized menu
@@ -82,13 +82,13 @@ exec --no-startup-id tilda
 exec --no-startup-id firefox-dev
 exec --no-startup-id code
 
-exec --no-startup-id teams
+exec --no-startup-id teams-for-linux
 exec --no-startup-id thunderbird
-
 
 exec --no-startup-id datagrip
 exec --no-startup-id insomnia
 exec --no-startup-id bitwarden
+exec --no-startup-id input-leap
 
 
 
@@ -104,7 +104,7 @@ bindsym $mod+Ctrl+b exec mate-terminal -e 'bmenu'
 # OLD MUSIC PLAYER - moc
 bindsym $mod+F5 exec mate-terminal -e 'firefox-dev'
 bindsym $mod+F6 exec mate-terminal -e 'ranger'
-bindsym $mod+F7 exec nautilus
+bindsym $mod+F7 exec dolphin
 
 ### SCREENSHOT
 bindsym Print exec --no-startup-id gnome-screenshot
@@ -268,39 +268,29 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
-#workspace $ws1 output DP-6-8
-#workspace $ws2 output DP-3
-#workspace $ws3 output DP-6-8
-#workspace $ws4 output DP-3
-#workspace $ws5 output DP-6-8
-#workspace $ws6 output DP-3
-#workspace $ws7 output DP-6-8
-#workspace $ws8 output DP-3
-#workspace $ws9 output DP-6-8
-#workspace $ws0 output DP-3
 
-
-# 4 screen setup at home
-workspace $ws1 output DP-3
-workspace $ws2 output DP-4
-workspace $ws3 output DP-1
-workspace $ws4 output DP-2
-workspace $ws5 output DP-3
-workspace $ws6 output DP-4
-workspace $ws7 output DP-1
-workspace $ws8 output DP-2
-workspace $ws9 output DP-3
-workspace $ws10 output DP-4
-workspace $ws11 output DP-3
-workspace $ws12 output DP-4
+# 3 screen setup at home
+workspace $ws1 output DP-2
+workspace $ws2 output DP-0
+workspace $ws3 output DP-6
+workspace $ws4 output DP-0
+workspace $ws5 output DP-6
+workspace $ws6 output DP-6
+workspace $ws7 output DP-2
+workspace $ws8 output DP-0
+workspace $ws9 output DP-2
+workspace $ws10 output DP-6
+workspace $ws11 output DP-0
+workspace $ws12 output DP-6
 
 
 # ASSIGN WINDOWS
 
 assign [class="firefox-aurora"] $ws1
-assign [class="code"] $ws2
+assign [class="Code"] $ws2
 assign [class="Nautilus"] $ws4
-assign [class="Microsoft Teams - Preview"] $ws5
+assign [class="dolphin"] $ws4
+assign [class="teams-for-linux"] $ws5
 assign [class="thunderbird"] $ws6
 assign [class="jetbrains-pycharm"] $ws7
 assign [class="jetbrains-datagrip"] $ws8
@@ -422,7 +412,7 @@ bar {
 
 # please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
-	tray_output DP-1
+	tray_output DP-6
 
 	bindsym button4 nop
 	bindsym button5 nop

@@ -106,6 +106,7 @@ alias vm="ssh -p 7822 zakk@compuware.store"
 # vpn
 alias fgs="forticlient vpn status"
 alias fgc="forticlient vpn connect INTRADE-DC -u zakk -p"
+alias fgc="sudo /opt/forticlient/vpn -s reports.intrade.app:10443 -u zakk -p"
 
 # youtube
 alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
@@ -113,7 +114,8 @@ alias ydl='~/source/ohmyconfig/scripts/ydl.sh'
 # Hadoop
 export PDSH_RCMD_TYPE=ssh
 #export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+#export JAVA_HOME=/usr/lib/jvm/java-19-openjdk-amd64
+export JAVA_HOME=~/.jdks/corretto-19.0.2/
 
 
 export HADOOP_HOME=/data/datastore/geospatial/hadoop/hadoop-3.2.2
@@ -121,8 +123,16 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 
 export GEOMESA_SPARK_JARS=/data/datastore/geospatial/geomesa/libs
 
+# FLUTTER PATH
+export PATH=/data/datastore/applications/flutter/bin:$PATH
+export PATH=/data/datastore/applications/android-studio/bin:$PATH
+
+#export PATH=$JAVA_HOME/bin:$PATH
+#export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LIBRARY_PATH
+
+
 # VIRTUALENV
 export PATH=$HOME/.local/bin:$PATH
 export WORKON_HOME=~/.virtualenvs
 mkdir -p ~/.virtualenvs
-source ~/.local/bin/virtualenvwrapper.sh 
+source ~/.local/bin/virtualenvwrapper.sh
