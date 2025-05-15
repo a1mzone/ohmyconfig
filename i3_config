@@ -57,7 +57,6 @@ bindsym $mod+Ctrl+m exec pavucontrol
 #bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.usb-M-Audio_M-Track_2X2-00.analog-stereo +10%; notify-send 'vol +10'"
 #bindsym XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.usb-M-Audio_M-Track_2X2-00.analog-stereo -10%; notify-send 'vol +10'"
 
-
 ####################################################
 ### STARTUP
 #################################################### 
@@ -86,11 +85,10 @@ exec --no-startup-id teams-for-linux
 exec --no-startup-id thunderbird
 
 exec --no-startup-id datagrip
-exec --no-startup-id insomnia
+#exec --no-startup-id insomnia
+exec --no-startup-id kreya
 exec --no-startup-id bitwarden
 exec --no-startup-id input-leap
-
-
 
 # exec --no-startup-id xmodmap .Xmodmap
 
@@ -214,19 +212,6 @@ set $ws10 10:
 set $ws11 11:
 set $ws12 12:
 
-# MUSIC -> 
-
-#set $ws1 1
-#set $ws2 2
-#set $ws3 3
-#set $ws4 4
-#set $ws5 5
-#set $ws6 6
-#set $ws7 7
-#set $ws8 8
-#set $ws9 9
-#set $ws10 10
-
 # SWITCH BETWEEN WORKSPACES
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -241,20 +226,7 @@ bindsym $mod+0 workspace $ws10
 bindsym $mod+F1 workspace $ws11
 bindsym $mod+F2 workspace $ws12
 
-# SWITCH WITH NUMPAD
-bindsym $mod+Mod2+KP_1 workspace $ws1
-bindsym $mod+Mod2+KP_2 workspace $ws2
-bindsym $mod+Mod2+KP_3 workspace $ws3
-bindsym $mod+Mod2+KP_4 workspace $ws4
-bindsym $mod+Mod2+KP_5 workspace $ws5
-bindsym $mod+Mod2+KP_6 workspace $ws6
-bindsym $mod+Mod2+KP_7 workspace $ws7
-bindsym $mod+Mod2+KP_8 workspace $ws8
-bindsym $mod+Mod2+KP_9 workspace $ws9
-bindsym $mod+Mod2+KP_0 workspace $ws10
-
 # MOVE CONTAINER TO WORKSPACES
-
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -268,24 +240,21 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
-
 # 3 screen setup at home
-workspace $ws1 output DP-2
-workspace $ws2 output DP-0
-workspace $ws3 output DP-6
-workspace $ws4 output DP-0
+workspace $ws1 output DP-0
+workspace $ws2 output DP-2
+workspace $ws3 output DP-0
+workspace $ws4 output DP-6
 workspace $ws5 output DP-6
 workspace $ws6 output DP-6
-workspace $ws7 output DP-2
+workspace $ws7 output DP-0
 workspace $ws8 output DP-0
 workspace $ws9 output DP-2
 workspace $ws10 output DP-6
 workspace $ws11 output DP-0
 workspace $ws12 output DP-6
 
-
 # ASSIGN WINDOWS
-
 assign [class="firefox-aurora"] $ws1
 assign [class="Code"] $ws2
 assign [class="Nautilus"] $ws4
