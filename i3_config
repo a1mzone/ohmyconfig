@@ -255,7 +255,7 @@ workspace $ws11 output DP-0
 workspace $ws12 output DP-6
 
 # ASSIGN WINDOWS
-assign [class="firefox-aurora"] $ws1
+assign [class="Firefox Developer Edition"] $ws1
 assign [class="Code"] $ws2
 assign [class="Nautilus"] $ws4
 assign [class="dolphin"] $ws4
@@ -263,7 +263,7 @@ assign [class="teams-for-linux"] $ws5
 assign [class="thunderbird"] $ws6
 assign [class="jetbrains-pycharm"] $ws7
 assign [class="jetbrains-datagrip"] $ws8
-assign [class="Insomnia"] $ws9
+assign [class="Kreya"] $ws9
 assign [class="Bitwarden"] $ws10
 assign [class="Vmware"] $ws12
 
