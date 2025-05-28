@@ -241,17 +241,17 @@ bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
 # 3 screen setup at home
-workspace $ws1 output DP-0
+workspace $ws1 output DP-4
 workspace $ws2 output DP-2
-workspace $ws3 output DP-0
+workspace $ws3 output DP-4
 workspace $ws4 output DP-6
 workspace $ws5 output DP-6
 workspace $ws6 output DP-6
-workspace $ws7 output DP-0
-workspace $ws8 output DP-0
+workspace $ws7 output DP-4
+workspace $ws8 output DP-4
 workspace $ws9 output DP-2
 workspace $ws10 output DP-6
-workspace $ws11 output DP-0
+workspace $ws11 output DP-4
 workspace $ws12 output DP-6
 
 # ASSIGN WINDOWS
@@ -375,7 +375,7 @@ bar {
 
 # please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
-	tray_output DP-0
+	tray_output DP-4
 
 	bindsym button4 nop
 	bindsym button5 nop
