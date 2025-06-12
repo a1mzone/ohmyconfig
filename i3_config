@@ -68,7 +68,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Ubuntu Server mate-polkit
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
 
-exec --no-startup-id ~/.screenlayout/quad_display.sh
+exec --no-startup-id ~/.screenlayout/dual_display.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 
@@ -269,24 +269,24 @@ bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
 
-# 3 screen setup at home
-workspace $ws1 output DP-2
-workspace $ws2 output DP-0
-workspace $ws3 output DP-6
-workspace $ws4 output DP-0
-workspace $ws5 output DP-6
-workspace $ws6 output DP-6
-workspace $ws7 output DP-2
-workspace $ws8 output DP-0
-workspace $ws9 output DP-2
-workspace $ws10 output DP-6
-workspace $ws11 output DP-0
-workspace $ws12 output DP-6
+# 2 screen setup at work
+workspace $ws1 output DisplayPort-5
+workspace $ws2 output DisplayPort-4
+workspace $ws3 output DisplayPort-5
+workspace $ws4 output DisplayPort-4
+workspace $ws5 output DisplayPort-5
+workspace $ws6 output DisplayPort-4
+workspace $ws7 output DisplayPort-5
+workspace $ws8 output DisplayPort-4
+workspace $ws9 output DisplayPort-5
+workspace $ws10 output DisplayPort-4
+workspace $ws11 output DisplayPort-5
+workspace $ws12 output DisplayPort-4
 
 
 # ASSIGN WINDOWS
 
-assign [class="firefox-aurora"] $ws1
+assign [class="firefox-dev"] $ws1
 assign [class="Code"] $ws2
 assign [class="Nautilus"] $ws4
 assign [class="dolphin"] $ws4
