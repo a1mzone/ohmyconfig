@@ -41,7 +41,7 @@ bindsym $mod+d exec "rofi -show run"
 bindsym $mod+z exec --no-startup-id morc_menu
 
 #exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec mate-terminal -e 'alsamixer'
+bindsym $mod+Ctrl+m exec mate-terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
 #exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
@@ -246,14 +246,14 @@ bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
 # 3 screen setup at home
-workspace $ws1 output DP-2
+workspace $ws1 output DP-3
 workspace $ws2 output DP-4
-workspace $ws3 output DP-2
+workspace $ws3 output DP-3
 workspace $ws4 output DP-1
 workspace $ws5 output DP-1
 workspace $ws6 output DP-1
-workspace $ws7 output DP-2
-workspace $ws8 output DP-2
+workspace $ws7 output DP-3
+workspace $ws8 output DP-3
 workspace $ws9 output DP-4
 workspace $ws10 output DP-4
 workspace $ws11 output DP-1
