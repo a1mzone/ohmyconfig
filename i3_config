@@ -28,7 +28,7 @@ font xft:URWGothic-Book 1
 floating_modifier $mod
 
 # start a mate-terminal
-bindsym $mod+Return exec mate-terminal
+bindsym $mod+space exec mate-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -67,7 +67,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # Ubuntu Server mate-polkit
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
 
-exec --no-startup-id ~/.screenlayout/quad_display.sh
+exec --no-startup-id ~/.screenlayout/tripple_display.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 
@@ -86,14 +86,19 @@ exec --no-startup-id thunderbird
 
 exec --no-startup-id datagrip
 #exec --no-startup-id insomnia
-exec --no-startup-id kreya
+#exec --no-startup-id kreya
 exec --no-startup-id bitwarden
-exec --no-startup-id input-leap
+#exec --no-startup-id input-leap
 
 # exec --no-startup-id xmodmap .Xmodmap
 
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id nitrogen --restore; sleep 5e; picom -b
+
+#exec --no-startup-id xset s off            # Disable screen saver
+#exec --no-startup-id xset -dpms            # Disable DPMS initially (so you control it)
+#exec --no-startup-id xset s noblank        # Disable screen blanking
+#exec --no-startup-id xset dpms 0 0 600
 
 # Start Applications
 bindsym $mod+Ctrl+b exec mate-terminal -e 'bmenu'
@@ -241,18 +246,18 @@ bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
 # 3 screen setup at home
-workspace $ws1 output DP-4
-workspace $ws2 output DP-2
-workspace $ws3 output DP-4
-workspace $ws4 output DP-6
-workspace $ws5 output DP-6
-workspace $ws6 output DP-6
-workspace $ws7 output DP-4
-workspace $ws8 output DP-4
-workspace $ws9 output DP-2
-workspace $ws10 output DP-6
-workspace $ws11 output DP-4
-workspace $ws12 output DP-6
+workspace $ws1 output DP-2
+workspace $ws2 output DP-4
+workspace $ws3 output DP-2
+workspace $ws4 output DP-1
+workspace $ws5 output DP-1
+workspace $ws6 output DP-1
+workspace $ws7 output DP-2
+workspace $ws8 output DP-2
+workspace $ws9 output DP-4
+workspace $ws10 output DP-4
+workspace $ws11 output DP-1
+workspace $ws12 output DP-1
 
 # ASSIGN WINDOWS
 assign [class="Firefox Developer Edition"] $ws1
