@@ -1,0 +1,53 @@
+# i3blocks config converted from py3status-style
+
+[public_ip]
+command=~/source/ohmyconfig/scripts/public_ip.sh
+interval=600
+label=🌐 IP
+
+[wireless]
+command=~/source/ohmyconfig/scripts/wireless.sh
+interval=10
+label=📶
+markup=pango
+
+[ethernet]
+command=~/source/ohmyconfig/scripts/ethernet.sh
+interval=10
+label=🖧
+markup=pango
+
+[cpu_usage]
+command=~/source/ohmyconfig/scripts/cpu_usage.sh
+interval=5
+label=🖥 CPU
+
+[memory]
+command=~/source/ohmyconfig/scripts/memory.sh
+interval=5
+label=🧠 MEM
+
+[disk_root]
+command=~/source/ohmyconfig/scripts/disk_root.sh
+interval=60
+label=📁 /
+
+[disk_data]
+command=~/source/ohmyconfig/scripts/disk_data.sh
+interval=60
+label=📂 /data
+
+#[battery]
+#command=~/source/ohmyconfig/scripts/battery.sh
+#interval=30
+#label=🔋
+
+[volume]
+command=~/source/ohmyconfig/scripts/volume.sh
+interval=2
+label=🔊
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+label=🕒
