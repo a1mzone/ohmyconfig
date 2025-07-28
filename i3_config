@@ -217,6 +217,10 @@ set $ws10 10:
 set $ws11 11:
 set $ws12 12:
 
+set $screen1 DP-2
+set $screen2 DP-0
+set $screen3 DP-6
+
 # SWITCH BETWEEN WORKSPACES
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -246,18 +250,18 @@ bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 
 # 3 screen setup at home
-workspace $ws1 output DP-3
-workspace $ws2 output DP-4
-workspace $ws3 output DP-3
-workspace $ws4 output DP-1
-workspace $ws5 output DP-1
-workspace $ws6 output DP-1
-workspace $ws7 output DP-3
-workspace $ws8 output DP-3
-workspace $ws9 output DP-4
-workspace $ws10 output DP-4
-workspace $ws11 output DP-1
-workspace $ws12 output DP-1
+workspace $ws1 output $screen2
+workspace $ws2 output $screen1
+workspace $ws3 output $screen2
+workspace $ws4 output $screen3
+workspace $ws5 output $screen3
+workspace $ws6 output $screen3
+workspace $ws7 output $screen2
+workspace $ws8 output $screen2
+workspace $ws9 output $screen1
+workspace $ws10 output $screen1
+workspace $ws11 output $screen1
+workspace $ws12 output $screen3
 
 # ASSIGN WINDOWS
 assign [class="Firefox Developer Edition"] $ws1
